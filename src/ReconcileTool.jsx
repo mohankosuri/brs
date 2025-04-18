@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 import Papa from 'papaparse';
 import { FaFileUpload, FaSyncAlt } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const ReconcileTool = () => {
   const [companyData, setCompanyData] = useState([]);
@@ -147,6 +148,7 @@ const ReconcileTool = () => {
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
+     <div className='flex justify-end'> <NavLink to={'/'}><button className='bg-red-600 py-2 px-4 text-white rounded full font-semibold '>Home</button></NavLink></div> 
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">📊 Bank Reconciliation Tool</h1>
 
       <div className="grid md:grid-cols-3 gap-4 mb-6">
